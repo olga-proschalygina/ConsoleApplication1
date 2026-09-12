@@ -37,7 +37,7 @@ int main() {
 			cout << " " << galToL( gal) << "литров\n";
 			break;		
 		case 0:
-			cout << "Работа завершена.\n";
+			cout << "Работа завершена успешно.\n";
 			break;
 		default:
 			cout << "Такого пункта нет.\n";
