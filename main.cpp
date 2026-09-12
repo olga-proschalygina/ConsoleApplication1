@@ -1,48 +1,40 @@
-// Лабораторная работа № 1. Вариант N.
-// Выполнил: Иванов И. И., группа XX-11.
+// Лабораторная работа № 1. Вариант 68.
+// Выполнил: Прощалыгина О. А., группа ПИ-53.
 #include <iostream>
+#include <locale.h>
 using namespace std;
 // ===== Расчётные функции варианта =====
-// Площадь прямоугольника со сторонами a и b
-double rectangleArea(double a, double b) {
-	return a * b;
+// Из литров в галлоны
+double lToGal(double l) {
+	return l / 3.78541;
 }
-// Периметр прямоугольника со сторонами a и b
-double rectanglePerimeter(double a, double b) {
-	return 2 * (a + b);
-}
-// Диагональ прямоугольника со сторонами a и b
-double rectangleDiagonal(double a, double b) {
-	return sqrt(a * a + b * b); // не забудьте #include <cmath>
+// Из галлонов в литры
+double galToL(double gal) {
+	return gal * 3.78541;
 }
 // ===== Главная функция: меню =====
 int main() {
+	setlocale(LC_ALL, "Russian");
 	int choice;
-	double a, b;
+	double l, gal;
 	do {
-		cout << "\n=== Вариант N: расчёты для прямоугольника ===\n";
-		cout << "1. Площадь\n";
-		cout << "2. Периметр\n";
-		cout << "3. Диагональ\n";
+		cout << "\n=== Вариант 68: Конвертеры величин ===\n";
+		cout << "1. Из литров в галлоны\n";
+		cout << "2. Из галлонов в литры\n";		
 		cout << "0. Выход\n";
 		cout << "Выберите пункт: ";
 		cin >> choice;
 		switch (choice) {
 		case 1:
-			cout << "Введите стороны a и b: ";
-			cin >> a >> b;
-			cout << "Площадь = " << rectangleArea(a, b) << "\n";
+			cout << "Введите количество литров: ";
+			cin >> l;
+			cout << " " << lToGal( l) << "\n";
 			break;
 		case 2:
-			cout << "Введите стороны a и b: ";
-			cin >> a >> b;
-			cout << "Периметр = " << rectanglePerimeter(a, b) << "\n";
-			break;
-		case 3:
-			cout << "Введите стороны a и b: ";
-			cin >> a >> b;
-			cout << "Диагональ = " << rectangleDiagonal(a, b) << "\n";
-			break;
+			cout << "Введите количество галлонов: ";
+			cin >> gal;
+			cout << " " << galToL( gal) << "\n";
+			break;		
 		case 0:
 			cout << "Работа завершена.\n";
 			break;
