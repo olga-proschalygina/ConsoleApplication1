@@ -18,7 +18,7 @@ int main() {
 	int choice;
 	double l, gal;
 	do {
-		cout << "\n=== Вариант 68: Конвертеры величин ===\n";
+		cout << "\n*** Калькулятор. Вариант 68 ***\n";
 		cout << "1. Из литров в галлоны\n";
 		cout << "2. Из галлонов в литры\n";		
 		cout << "0. Выход\n";
@@ -28,12 +28,12 @@ int main() {
 		case 1:
 			cout << "Введите количество литров: ";
 			cin >> l;
-			cout << " " << lToGal( l) << "\n";
+			cout << " " << lToGal( l) << "галлонов\n";
 			break;
 		case 2:
 			cout << "Введите количество галлонов: ";
 			cin >> gal;
-			cout << " " << galToL( gal) << "\n";
+			cout << " " << galToL( gal) << "литров\n";
 			break;		
 		case 0:
 			cout << "Работа завершена.\n";
